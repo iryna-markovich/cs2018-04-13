@@ -40,10 +40,10 @@ class TaskC3 {
         double weightMars = getWeight(weight);
         System.out.println(weightMars);
     }
-    private static double getWeight(int weight){
+    public static double getWeight(int weight){
         double GMARS = 3.86;
         double GEARTH = 9.81;
         double result = (weight * GMARS ) / GEARTH;
-        return new BigDecimal(result).setScale(2, RoundingMode.DOWN).doubleValue();
+        return new BigDecimal(result).setScale(2, RoundingMode.HALF_DOWN).doubleValue();
     }
 }
