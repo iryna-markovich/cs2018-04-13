@@ -1,5 +1,7 @@
 package by.it.markovich.lesson02;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 
 /*
@@ -35,13 +37,13 @@ class TaskC3 {
     public static void main(String[] args) {
         Scanner newScanner = new Scanner(System.in);
         int weight = newScanner.nextInt();
+        double weightMars = getWeight(weight);
+        System.out.println(weightMars);
+    }
+    private static double getWeight(int weight){
         double GMARS = 3.86;
         double GEARTH = 9.81;
-        /*
-            public static double getWeight(){
-                (weight*GEARTH)/GMARS;
-                return getWeight();
-            }
-        */
+        double result = (weight * GMARS ) / GEARTH;
+        return new BigDecimal(result).setScale(2, RoundingMode.DOWN).doubleValue();
     }
 }
