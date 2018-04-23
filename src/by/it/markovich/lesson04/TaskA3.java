@@ -22,6 +22,26 @@ package by.it.markovich.lesson04;
  */
 
 
+import java.util.Scanner;
+
 public class TaskA3 {
+    public static void main(String[] args) {
+        Scanner newScanner = new Scanner(System.in);
+        int i = newScanner.nextInt();
+        int j = newScanner.nextInt();
+        int k = newScanner.nextInt();
+        if (i==j && j==k){
+            System.out.println(i+ " " + j + " " + k);
+        }
+        else if (i==j){
+            System.out.println(i+ " " + j);
+        }
+        else if (i==k){
+            System.out.println(i+ " " + k);
+        }
+        else if (j==k){
+            System.out.println(j+ " " + k);
+        }
+    }
 
 }
