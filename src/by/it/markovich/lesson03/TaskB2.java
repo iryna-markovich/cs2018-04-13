@@ -37,13 +37,14 @@ class TaskB2 {
         int a = newScanner.nextInt();
         int b = newScanner.nextInt();
         int c = newScanner.nextInt();
+        double dis = dis(a, b, c);
 
-        if (dis(a, b, c) > 0){
-            double x1 = (- b - Math.sqrt(dis(a, b, c))) / (2 * a);
-            double x2 = (- b + Math.sqrt(dis(a, b, c))) / (2 * a);
+        if (dis > 0){
+            double x1 = (- b - Math.sqrt(dis)) / (2 * a);
+            double x2 = (- b + Math.sqrt(dis)) / (2 * a);
             System.out.println(x1 + " " + x2);
         }
-        else if (dis(a, b, c) == 0){
+        else if (dis == 0){
             double x = (- b) / (2 * a);
             System.out.println(x);
         }
