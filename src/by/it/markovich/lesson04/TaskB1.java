@@ -28,16 +28,24 @@ import java.util.Scanner;
 
 */
 public class TaskB1 {
-    /*
+
     public static void main(String[] args) {
         Scanner newScanner = new Scanner(System.in);
         int x = newScanner.nextInt();
-        if () {
-            System.out.println("количество дней в году: 365");
-        }
-        else {
+        double aliquot4 = x % 4;
+        double aliquot100 = x % 100;
+        double aliquot400 = x % 400;
+        if (aliquot400 == 0) {
             System.out.println("количество дней в году: 366");
         }
+        else if (aliquot100 == 0) {
+            System.out.println("количество дней в году: 365");
+        }
+        else if (aliquot4 == 0) {
+            System.out.println("количество дней в году: 366");
+        }
+        else {
+            System.out.println("количество дней в году: 365");
+        }
     }
-    */
 }

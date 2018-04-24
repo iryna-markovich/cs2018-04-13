@@ -1,5 +1,10 @@
 package by.it.markovich.lesson04;
 
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 /*
 Напишите программу которая спрашивает у пользователя:
 Какую вы хотите зарплату в $$$?
@@ -37,6 +42,27 @@ package by.it.markovich.lesson04;
 
 */
 public class TaskC1 {
+    public static void main(String[] args) {
+        System.out.println("Какую вы хотите зарплату в $$$?");
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
 
+        if (i < 300 || i > 3000) {
+            System.out.println("Мы вам перезвоним!");
+        } else {
+            String[] monthList = {"0", "январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь", "13", "14"};
 
+            for (int month = 0; month <= 14; month++) {
+                if (month == 0 || month == 13 || month == 14) {
+                    System.out.println("За месяц " + monthList[month] + " начислено $0.0");
+                } else if (month == 6 || month == 7 || month == 8) {
+                    System.out.println("За " + monthList[month] + " начислено $" + i);
+                    if (i == 666) break;
+                } else {
+                    System.out.println("За " + monthList[month] + " начислено $" + i * 1.5);
+                    if (i == 666 / 1.5) break;
+                }
+            }
+        }
+    }
 }
