@@ -25,7 +25,18 @@ package by.it.markovich.lesson04;
  */
 
 
+import java.util.Scanner;
 
 public class TaskB3 {
-
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        for (int num = 1; num < i; num++) {
+            int sum = (num * (num + 1)) / 2;
+            if (sum > i) {
+                break;
+            }
+            System.out.print(sum + ",");
+        }
+    }
 }

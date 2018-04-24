@@ -23,6 +23,65 @@ package by.it.markovich.lesson04;
 десять умножить на десять равно сто
 */
 
-public class TaskC3 {
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class TaskC3 {
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                int result = i * j;
+                /*
+                String[] numbers = {"один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять", "десять", "", "двенадцать", "", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать", "двадцать", "двадцать один", "", "", "двадцать четыре", "двадцать пять", "", "двадцать семь", "двадцать восемь", "", "тридцать", "", "тридцать два", "", "", "тридцать пять", "тридцать шесть", "", "", "", "сорок", "", "сорок два", "", "", "сорок пять", "", "", "сорок восемь", "сорок девять", "пятьдесят", "", "", "", "пятьдесят четыре", "", "пятьдесят шесть", "", "", "", "шестьдесят", "", "", "шестьдесят три", "шестьдесят четыре", "", "", "", "", "", "семьдесят", "", "семьдесят два", "", "", "", "", "", "", "", "восемьдесят", "восемьдесят один", "", "", "", "", "", "", "", "", "девяносто", "", "", "", "", "", "", "", "", "", "сто"
+                };
+                */
+                String[] numbers = {"один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять", "десять"};
+                numbers = Arrays.copyOf(numbers, 100);
+                String word = "десят";
+                numbers[11] = "двенадцать";
+                numbers[13] = "четырнадцать";
+                numbers[14] = "пятнадцать";
+                numbers[15] = "шестнадцать";
+                numbers[16] = "семнадцать";
+                numbers[17] = "восемнадцать";
+                numbers[18] = "девятнадцать";
+                numbers[19] = "двадцать";
+                numbers[29] = "тридцать";
+                numbers[39] = "сорок";
+                numbers[49] = numbers[4] + word;
+                numbers[59] = numbers[5] + word;
+                numbers[69] = numbers[6] + word;
+                numbers[79] = numbers[7] + word;
+                numbers[89] = "девяносто";
+                numbers[99] = "сто";
+                numbers[20] = numbers[19] + " " + numbers[0];
+                numbers[23] = numbers[19] + " " + numbers[3];
+                numbers[24] = numbers[19] + " " + numbers[4];
+                numbers[25] = numbers[19] + " " + numbers[5];
+                numbers[26] = numbers[19] + " " + numbers[6];
+                numbers[27] = numbers[19] + " " + numbers[7];
+
+                numbers[31] = numbers[29] + " " + numbers[1];
+                numbers[34] = numbers[29] + " " + numbers[4];
+                numbers[35] = numbers[29] + " " + numbers[5];
+
+                numbers[41] = numbers[39] + " " + numbers[1];
+                numbers[44] = numbers[39] + " " + numbers[4];
+                numbers[47] = numbers[39] + " " + numbers[7];
+                numbers[48] = numbers[39] + " " + numbers[8];
+
+                numbers[53] = numbers[49] + " " + numbers[3];
+                numbers[55] = numbers[49] + " " + numbers[5];
+
+                numbers[62] = numbers[59] + " " + numbers[2];
+                numbers[63] = numbers[59] + " " + numbers[3];
+
+                numbers[71] = numbers[69] + " " + numbers[1];
+
+                numbers[80] = numbers[79] + " " + numbers[0];
+                System.out.println(numbers[i - 1] + " умножить на " + numbers[j - 1] + " равно " + numbers[result - 1]);
+            }
+        }
+    }
 }
