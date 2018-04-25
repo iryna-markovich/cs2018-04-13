@@ -22,10 +22,6 @@ public class TaskB1 {
         arr.add("four");
         arr.add("five");
         System.out.println(arr.size());
-        /*
-        for(int i = 0; i < arr.size(); i++) {
-            System.out.println(str);
-        }*/
         for(String str : arr) {
             System.out.println(str);
         }

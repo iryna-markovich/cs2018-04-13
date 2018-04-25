@@ -11,20 +11,42 @@ package by.it.markovich.lesson05;
 */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class TaskC1 {
     public static void main(String[] args) throws Exception {
-        int[] arr = new int[20];
-
+        ArrayList<Integer> arr = new ArrayList<Integer>();
         Scanner newScanner = new Scanner(System.in);
+        for (int x = 0; x < 20; x++) {
+            int elem = newScanner.nextInt();
+            arr.add(elem);
+        }
+        ArrayList<Integer> arrD3 = new ArrayList<Integer>();
+        ArrayList<Integer> arrD2 = new ArrayList<Integer>();
+        ArrayList<Integer> arrOther = new ArrayList<Integer>();
 
-
+        for (int i = 0; i < 20; i++) {
+            int j = arr.get(i);
+            if (j % 3 == 0) {
+                arrD3.add(j);
+            }
+            if (j % 2 == 0) {
+                arrD2.add(j);
+            } else if (j % 3 != 0) {
+                arrOther.add(j);
+            }
+        }
+        printList(arrD3);
+        printList(arrD2);
+        printList(arrOther);
     }
 
     private static void printList(List<Integer> list) {
-        for (Integer aList : list) System.out.println(aList);
+        for (Integer aList : list) {
+            System.out.println(aList);
+        }
     }
 
 

@@ -34,7 +34,7 @@ public class TaskB2 {
         int[] b = new int[10];
         for (int i = 0; i < a.length; i++) {
             a[i] = m[i];
-            b[i] = m[i + 1];
+            b[i] = m[i + 10];
         }
         System.out.println("a=" + Arrays.toString(a));
         System.out.println("b=" + Arrays.toString(b));
